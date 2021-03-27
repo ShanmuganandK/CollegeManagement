@@ -13,6 +13,7 @@ import "./styles/styles.css";
 import Routes from "./routes";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import { lightGreen } from "@material-ui/core/colors";
 
 class App extends Component {
 
@@ -32,7 +33,7 @@ class App extends Component {
     return (
       <Fragment>
         {this.state.tokenChecked && (
-          <MuiPickersUtilsProvider utils={DateFnsUtils}>
+          <MuiPickersUtilsProvider utils={DateFnsUtils} theme={lightGreen}>
             <Router>
               <Navbar />
               <Grid container spacing={0}>

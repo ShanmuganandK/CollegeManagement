@@ -86,7 +86,7 @@ class Navbar extends React.Component {
       <div className={classes.list}>
         <div className="navbar-drawer-header">
           
-          <div className="navbar-drawer-text">test</div>
+          <div className="navbar-drawer-text">Jaya Engineering College</div>
         </div>
         <Divider />
         <List>
@@ -160,7 +160,7 @@ class Navbar extends React.Component {
             )}
             <Typography variant="h6" color="inherit" className={classes.grow}>
               <Link to="/home" className="white">
-                test
+              <img src="http://jec.ac.in/wp-content/themes/Jayacollege_2017/images/logo.png" className={classes.grow}></img>
               </Link>
             </Typography>
             {this.props.user && (

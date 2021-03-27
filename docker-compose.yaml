@@ -1,17 +1,17 @@
 # Docker-compose version
-version: '3'
+#version: '1'
 
 # Define the services/containers to be run
 services:
       
   # Database
-  database:
+  #database:
     # image to build container from
-    image: mongo:4.1 
-    ports:
-      - "27018:27017"
-    networks:
-      - backend_network
+    #image: mongo:4.1 
+    #ports:
+      #- "27018:27017"
+    #networks:
+      #- backend_network
   
   # Backend
   backend: 
@@ -20,14 +20,14 @@ services:
     ports:
       - "3000:3000"
     # link this service to database service
-    links:
-      - database 
-    environment:
-      - DB_HOST=database
-    networks:
-      - backend_network
-    depends_on:
-      - database
+    #links:
+      #- database 
+    #environment:
+      #- DB_HOST=database
+    #networks:
+      #- backend_network
+    #depends_on:
+      #- database
       
   # Frontend
   frontend:
@@ -45,11 +45,11 @@ services:
     ports:
       - "80:80"
     depends_on:
-      - backend
+      #- backend
       - frontend
     networks:
       - frontend_network
-      - backend_network
+      #- backend_network
 
 networks:
   frontend_network:

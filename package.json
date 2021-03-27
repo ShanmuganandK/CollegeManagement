@@ -2,7 +2,6 @@
   "name": "test",
   "version": "1.0.0",
   "private": true,
- 
   "scripts": {
     "install": "cd client && npm install && cd ../server && npm install",
     "start": "concurrently --raw \"cd server && npm start\" \"cd client && npm start\" ",
@@ -14,6 +13,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "@material-ui/styles": "^5.0.0-alpha.28",
     "concurrently": "^3.2.0",
     "copy-webpack-plugin": "^4.0.1"
   },
