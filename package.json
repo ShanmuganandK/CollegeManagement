@@ -13,9 +13,13 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@material-ui/styles": "^5.0.0-alpha.28",
     "concurrently": "^3.2.0",
-    "copy-webpack-plugin": "^4.0.1"
+    "copy-webpack-plugin": "^4.0.1",
+    "yarn": "^1.22.10"
   },
-  "repository": {}
+  "repository": {},
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+  
 }

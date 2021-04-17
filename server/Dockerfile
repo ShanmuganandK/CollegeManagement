@@ -1,22 +1,19 @@
+# pull official base image
+FROM node:13.12.0-alpine
 
-
-# Copy source files
-WORKDIR /source 
-COPY . /source
-
-# Move source file with node_modules
-RUN rm -Rf /app/source
-RUN rm -Rf /source/node_modules
-RUN mv /source/* /app
-
-# Install dependencies
+# set working directory
 WORKDIR /app
-RUN yarn install
 
-# Set env vars
-ENV DB_HOST localhost
-ENV NODE_PORT 3000
-ENV NODE_API /api
+# add `/app/node_modules/.bin` to $PATH
+ENV PATH /app/node_modules/.bin:$PATH
 
-# Expose port
-EXPOSE 3000
+# install app dependencies
+COPY package.json ./
+COPY package-lock.json ./
+RUN npm install
+
+# add app
+COPY . ./
+
+# start app
+CMD ["npm", "start"]    

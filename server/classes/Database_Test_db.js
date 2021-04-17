@@ -23,7 +23,7 @@ class Database {
    */
   async init() {
     await this.authenticate();
-    Logger.info("MongoDB connected at: " + properties.test_db_dbUrl);
+    Logger.info("MongoDB connected at: " + "mongodb+srv://Student_Profile:Student_Profile@sting.pmcwx.mongodb.net/Student_Profile_DB?retryWrites=true&w=majority");
 
     // Start Init Models
 
